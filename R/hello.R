@@ -20,6 +20,26 @@ delta<-function(a,b,c){
 }
 
 
-#https://rpubs.com/kikihatzistavrou/80124 21/10/2016 14:00
 
-#the coding has been modified to allow for complex answers.
+#Ivan-Peri Version:
+
+quad_roots <- function(a,b,c) # a simple function that calculates the roots of a quadratic equation
+
+{ dis <- b^2 - 4*a*c #calculting the discriminant 
+
+	if (a != 0) # check that we actually have a quadratic equation (not linear)
+  
+		{if (det >= 0) # case1: non-negative discriminant
+			{roots <- c((-b+sqrt(det))/(2*a),(-b-sqrt(det))/(2*a))} # result as vector of length 2 
+	
+		else # otherwise give a complex solution
+			{i <- sqrt(as.complex(-1)) # imaginary unit (i)
+			roots <- c((-b+sqrt(det*(-1)))*i/(2*a),(-b-sqrt(det*(-1)))*i/(2*a))} # result as vector of length 2 
+
+		print(paste('X1 = ', roots[1], ' : X2 = ', roots[2])) # print the result in a user-friendly format
+
+		return(roots)} # return the result
+
+	else # if the equation is linear
+	{print('please provide valid quadratic eqution coefficients!')}
+}
