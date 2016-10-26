@@ -29,12 +29,12 @@ quad_roots <- function(a,b,c) # a simple function that calculates the roots of a
 
 	if (a != 0) # check that we actually have a quadratic equation (not linear)
   
-		{if (det >= 0) # case1: non-negative discriminant
-			{roots <- c((-b+sqrt(det))/(2*a),(-b-sqrt(det))/(2*a))} # result as vector of length 2 
+		{if (dis >= 0) # case1: non-negative discriminant
+			{roots <- c((-b+sqrt(dis))/(2*a),(-b-sqrt(dis))/(2*a))} # result as vector of length 2 
 	
 		else # otherwise give a complex solution
 			{i <- sqrt(as.complex(-1)) # imaginary unit (i)
-			roots <- c((-b+sqrt(det*(-1)))*i/(2*a),(-b-sqrt(det*(-1)))*i/(2*a))} # result as vector of length 2 
+			roots <- c((-b+sqrt(dis*(-1)))*i/(2*a),(-b-sqrt(dis*(-1)))*i/(2*a))} # result as vector of length 2 
 
 		print(paste('X1 = ', roots[1], ' : X2 = ', roots[2])) # print the result in a user-friendly format
 
