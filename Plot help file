@@ -1,0 +1,36 @@
+\name{plot.root_vector}
+\Rdversion{1.2}
+\alias{plot.root_vector}
+\title{
+plot.root_vector
+}
+\description{The function plot.root_vector plots the quadratic function ax^2 + bx + c and shows its roots
+}
+\usage{
+plot(quad_roots(a,b,c))
+}
+\arguments{
+  \item{a}{
+  a is the coefficient of the x**2 term
+}
+  \item{b}{
+  b is the coefficient of the x term
+}
+  \item{c}{
+  c is a real number
+}
+}
+\details{The roots of a quadratic function are the points y=p and y=q where x=0.
+}
+\value{The plot highlights with circles the roots of the quadratic equation, where x=0.
+If the coefficient a>0, the plot will show a parabola with gradient=0 at its lowest point.
+If the coefficient a<0, the plot will show a parabola with gradient=0 at its highest point.
+}
+\author{
+Aaron Bosley, Aashni Shah, Cameron Graham, Ivan Zubov, James Thurgood, Periklis Mylonas, Zhizhou Zhang
+}
+\seealso{\code{\link{quad_roots}}
+\examples{plot(quad_roots(1,8,15))
+plot(quad_roots(1,0,1))
+}
+\keyword{ math }
