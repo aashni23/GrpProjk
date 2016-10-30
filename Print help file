@@ -1,0 +1,39 @@
+\name{print.root_vector}
+\Rdversion{1.2}
+\alias{print.root_vector}
+\title{
+print.root_vector
+}
+\description{The function print.root_vector prints the roots of the quadratic function ax^2 + bx + c
+}
+\usage{
+print(quad_roots(a,b,c))
+}
+\arguments{
+  \item{a}{
+  a is the coefficient of the x**2 term
+}
+  \item{b}{
+  b is the coefficient of the x term
+}
+  \item{c}{
+  c is a real number
+}
+}
+\details{The roots of a quadratic function are the points y=p and y=q where x=0.
+}
+\value{The function prints the roots a and b as
+\item{first root: p
+second root: q}{for a function with real and different roots}
+\item{first root: p
+second root: NA}{for a function with a double root}
+}
+\author{
+Aaron Bosley, Aashni Shah, Cameron Graham, Ivan Zubov, James Thurgood, Periklis Mylonas, Zhizhou Zhang
+}
+\seealso{\code{\link{quad_roots}}
+}
+\examples{print(quad_roots(1,8,15))
+print(quad_roots(1,0,1))
+}
+\keyword{ math }
